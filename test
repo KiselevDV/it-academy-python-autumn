@@ -1,0 +1,31 @@
+num = int(input('Enter number:'))
+a = b = 1
+for i in range(num):
+    print(b)
+    b += a
+    if i + 1 >= num / 2 + 0.5:
+        break
+    print(a)
+    a += b
+
+num = int(input('Enter number:'))
+test = num
+dopel = 0
+while 1:
+    dopel += num % 10
+    num //= 10
+    if num / 10 <= 0:
+        break
+    dopel *= 10
+if test == dopel:
+    print('palindrome')
+else:
+    print('not palindrome')
+
+rubles = int(input('Enter rubles: '))
+kopecks = int(input('Enter kopecks: '))
+count = int(input('Enter count: '))
+price = (rubles + kopecks * 0.01) * count
+head = int(price // 1)
+tail = int(price % 1 * 100)
+print(f'Account in the amount of {head} rubles {tail} kopecks')
