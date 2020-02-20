@@ -1,5 +1,13 @@
-import re, sys, glob, unittest, csv, itertools, random
+import re
+import sys
+import glob
+import unittest
+import csv
+import itertools
+import random
 from time import localtime
+import xml.etree.ElementTree as etree
+from itertools import groupby
 
 
 BOARD_SIZE = 8
@@ -110,7 +118,7 @@ my_account.withdraw(50)
 print(my_account.balance, my_account.overdrawn())
 
 
-def median(pool):
+def medians(pool):
     copy = sorted(pool)
     size = len(copy)
     if size % 2 == 1:
@@ -121,7 +129,7 @@ def median(pool):
 
 class TestMedian(unittest.TestCase):
     def testMedian(self):
-        self.assertEqual(median([2, 9, 9, 7, 9, 2, 4, 5, 8]), 7)
+        self.assertEqual(medians([2, 9, 9, 7, 9, 2, 4, 5, 8]), 7)
 
 
 if __name__ == '__main__':
@@ -130,7 +138,7 @@ if __name__ == '__main__':
 
 def median(pool):
     '''Statistical median to demonstrate doctest.
-    >>> median([2, 9, 9, 7, 9, 2, 4, 5, 8])
+    >> median([2, 9, 9, 7, 9, 2, 4, 5, 8])
     6 #change to 7 in order to pass the test
     '''
     copy = sorted(pool)
@@ -246,7 +254,6 @@ dinner_recipe = '''<html><body><table>
 </table></body></html>'''
 
 # From http://effbot.org/zone/element-index.htm
-import xml.etree.ElementTree as etree
 
 tree = etree.fromstring(dinner_recipe)
 
