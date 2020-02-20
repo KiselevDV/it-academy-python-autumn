@@ -133,7 +133,7 @@ def checkio(number: int) -> str:
 """
 
 
-def checkio(array):
+def checkioo(array):
     sum = 0
     for i in array[::2]:
         sum += i
