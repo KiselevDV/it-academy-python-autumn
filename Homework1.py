@@ -1,14 +1,21 @@
-import glob
-import sys
 import re
+
+import glob
+
 import csv
-import unittest
+
+import sys
+
 import itertools
+
+import unittest
+
 import random
 
 import xml.etree.ElementTree as etree
 
 from time import localtime
+
 from itertools import groupby
 
 
@@ -139,11 +146,13 @@ class TestMedian(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
+"""Statistical median to demonstrate doctest.
+median([2, 9, 9, 7, 9, 2, 4, 5, 8])
+6 #change to 7 in order to pass the test
+"""
+
 
 def median(pool):
-    ''' Statistical median to demonstrate doctest.
-    median([2, 9, 9, 7, 9, 2, 4, 5, 8])
-    6 #change to 7 in order to pass the test'''
     copy = sorted(pool)
     size = len(copy)
     if size % 2 == 1:
