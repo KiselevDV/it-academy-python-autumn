@@ -9,14 +9,14 @@ Output: Общая цена 9 рублей 60 копеек
 """
 m = int(input('Введите количество рублей: '))
 n = int(input('Введите количество копеек: '))
-l = int(input('Введите количество товара: '))
+l_1 = int(input('Введите количество товара: '))
 
-price_n = n * l
+price_n = n * l_1
 
 if price_n >= 100:
     price_n %= 100
     m_1 = price_n // 100
-price_m = m * l + m_1
+price_m = m * l_1 + m_1
 print('Общая цена', price_m, 'рублей', price_n, 'копеек')
 
 """
