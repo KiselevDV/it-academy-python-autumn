@@ -27,7 +27,7 @@ a list comprehension to construct the list ['1a', '2a',
 '3a', '4a']. Simultaneously remove the element '2a' from
 the above list and print it. Copy the above list and add
 '2a' back into the list such that the original is still
-missing it. 
+missing it.
 """
 lst_1 = [a + b for a in "ab" for b in "bcd"]
 print("Список № 1: ", lst_1, "\n")
