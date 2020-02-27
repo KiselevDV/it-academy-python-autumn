@@ -58,8 +58,8 @@ countys_cities = {}
 cityes = []
 
 for el in range(quantity_1):
-    country, *cities = input\
-        ('Ввдеите страну и города этой страны: ').split()
+    country, *cities =\
+        input('Ввдеите страну и города этой страны: ').split()
     for city in cities:
         countys_cities[city] = country
 
