@@ -23,8 +23,7 @@ for i in range(n):
 
 m = int(input("Введите количество запросов стран: "))
 for j in range(m):
-    j = countrys_and_cities.get\
-        (input("Введите название города: "))
+    j = countrys_and_cities.get(input("Введите название города: "))
     print(j)
 
 """
