@@ -30,5 +30,5 @@ try:
             with open('ratings.txt', 'a') as ratings:
                 ratings.write(position + "\n")
 
-except:
+except FileNotFoundError:
     print('Упс!')
