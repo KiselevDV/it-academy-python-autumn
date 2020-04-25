@@ -120,18 +120,3 @@ def euclidean_theorem():
     while m != 0:
         m, n = n % m, m
     print(n)
-
-
-def runner(*names):
-    """Реализация функции от функций"""
-    if names:
-        for function in names:
-            function()
-    else:
-        dict_comprehensions()
-        countrys_and_cities()
-        two_lists_1()
-        two_lists_2()
-        language()
-        text()
-        euclidean_theorem()

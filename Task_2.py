@@ -4,19 +4,24 @@
 """
 
 
-def all_calls(call_func):
-    def wrapper(rec):
-        result = call_func(rec)
+def calls(my_func):
+    def wrapper():
+        result = my_func()
         with open('results.txt', 'a') as file:
             file.write(str(result) + '\n')
 
     return wrapper
 
 
-@all_calls
-def call_func(rec):
-    return rec
+@calls
+def my_func():
+    long_words = ''
+    text = input("Введите текст ").split()
+    for el in text:
+        if len(el) > len(long_words):
+            long_words = el
+    print(long_words)
+    return long_words
 
 
-rec = int(input())
-call_func(rec)
+my_func()
