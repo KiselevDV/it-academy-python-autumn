@@ -42,7 +42,9 @@ class Critter(object):
         return u
 
     def talk(self):
-        print("Меня зовут", self.name, ", и сейчас я чувствую себя", self.mood, "\n")
+        print("Меня зовут",
+              self.name, ", и сейчас я чувствую себя",
+              self.mood, "\n")
         self.__pass_time()
 
     def eat(self):
